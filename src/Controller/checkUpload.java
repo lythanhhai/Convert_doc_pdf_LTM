@@ -23,6 +23,10 @@ import org.apache.tomcat.util.http.fileupload.RequestContext;
 import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 
+import com.spire.doc.Document;
+import com.spire.doc.FileFormat;
+import com.spire.doc.ToPdfParameterList;
+
 import Model.BO.*;
 
 
@@ -65,11 +69,20 @@ public class checkUpload extends HttpServlet {
 	        InputStream fileContent = filePart.getInputStream();
 
 			try {
-				handleFile.insertUrl_BO(id, userName);
 				id++;
+				handleFile.insertUrl_BO(id, userName);
 				listFileName.add(fileName);
 				listFileContent.add(fileContent);
-				handleFile.threadHandleFile(fileContent);
+				//handleFile.threadHandleFile(fileContent);
+				try
+				{
+					handleFile.convert();
+				}
+				catch(Exception err)
+				{
+					
+				}
+				System.out.println("oke");
 				
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
