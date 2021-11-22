@@ -52,19 +52,7 @@ fileInput.onchange = ({ target })=>{
 
 
 function uploadFile(name){
-//  let xhr = new XMLHttpRequest();
-//  xhr.open("POST", "php/upload.php");
-//  xhr.upload.addEventListener("progress", ({loaded, total}) =>{
-//	  
-//    let fileLoaded = Math.floor((loaded / total) * 100);
-//    let fileTotal = Math.floor(total / 1000);
-//    let fileSize;
-//    (fileTotal < 1024) ? fileSize = fileTotal + " KB" : fileSize = (loaded / (1024*1024)).toFixed(2) + " MB";
-
-	progressArea.innerHTML = "";
-	
-      
-      //for(var i = 0 ; i < )
+	  progressArea.innerHTML = "";
       uploadedHTML += `<li class="row">
                             <div class="content upload">
                               <i class="fas fa-file-alt"></i>
@@ -77,11 +65,8 @@ function uploadFile(name){
                           </li>`;
       //uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML);
       uploadedArea.innerHTML = uploadedHTML;
-
       //<i class="fas fa-times"></i>
-//  });
-//  let data = new FormData(form);
-//  xhr.send(data);
+
 }
 
 
