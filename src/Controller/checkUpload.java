@@ -73,10 +73,9 @@ public class checkUpload extends HttpServlet {
 				handleFile.insertUrl_BO(id, userName);
 				listFileName.add(fileName);
 				listFileContent.add(fileContent);
-				//handleFile.threadHandleFile(fileContent);
 				try
 				{
-					handleFile.convert();
+					handleFile.threadHandleFile(id, fileName, fileContent);
 				}
 				catch(Exception err)
 				{
