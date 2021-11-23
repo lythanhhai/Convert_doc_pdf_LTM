@@ -33,11 +33,11 @@ public class handleFile_BO {
 		return handleFile.getIDMax_DAO();
 	}
 	
-	public void threadHandleFile(InputStream fileContent)
+	public void threadHandleFile(int id, String fileName, InputStream fileContent)
 	{
 		try
 		{
-			Handle handle = new Handle();
+			Handle handle = new Handle(id, fileName, fileContent);
 			handle.start();
 		}
 		catch(Exception err)
@@ -46,44 +46,17 @@ public class handleFile_BO {
 		}
 	}
 	
-	public void convert()
-	{
-		try 
-		{
-			//Load the Word Document
-			Document doc = new Document();
-			
-			doc.loadFromFile("D:\\Programming\\java\\testSpire\\gitBasic.docx");
-			
-			//create an instance of ToPdfParameterList.
-			ToPdfParameterList ppl=new ToPdfParameterList();
-			
-			//embeds full fonts by default when IsEmbeddedAllFonts is set to true.
-			ppl.isEmbeddedAllFonts(true);
-			
-			//set setDisableLink to true to remove the hyperlink effect for the result PDF page.
-			//set setDisableLink to false to preserve the hyperlink effect for the result PDF page.
-			ppl.setDisableLink(true);
-			
-			//Set the output image quality as 40% of the original image. 80% is the default setting.
-			doc.setJPEGQuality(40);
-			
-			//Save to file.
-			doc.saveToFile("D:\\Programming\\java\\testSpire\\toPDF1.pdf", FileFormat.PDF);
-			
-			//System.out.println("oke");
-		}
-		catch(Exception err)
-		{
-			
-		}
-	}
 }
 
 class Handle extends Thread {
 	
-
-	public Handle() {
+	InputStream fileContent;
+	int id;
+	String fileName;
+	public Handle(int id, String fileName, InputStream fileContent) {
+		this.fileContent = fileContent;
+		this.id = id;
+		this.fileName = fileName;
 	}
 
 	public void run() {
@@ -92,7 +65,8 @@ class Handle extends Thread {
 			//Load the Word Document
 	        Document doc = new Document();
 	        
-	        doc.loadFromFile("D:\\Programming\\java\\testSpire\\gitBasic.docx");
+	        doc.loadFromStream(this.fileContent, FileFormat.Docx);
+	        //doc.loadFromFile("D:\\Programming\\java\\testSpire\\gitBasic.docx");
 
 	        //create an instance of ToPdfParameterList.
 	        ToPdfParameterList ppl=new ToPdfParameterList();
@@ -108,7 +82,8 @@ class Handle extends Thread {
 	        doc.setJPEGQuality(40);
 
 	        //Save to file.
-	        doc.saveToFile("D:\\Programming\\java\\testSpire\\toPDF1.pdf", FileFormat.PDF);
+	        //doc.saveToFile("D:\\Programming\\java\\testSpire\\toPDF1.pdf", FileFormat.PDF);
+	        doc.saveToFile("D:\\Programming\\java\\testSpire\\" + this.fileName.split(".")[0] + "_" + "Converted" + ".pdf", FileFormat.PDF);
 	        
 	        System.out.println("oke");
 		}
