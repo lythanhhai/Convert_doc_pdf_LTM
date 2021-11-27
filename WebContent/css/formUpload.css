@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+html
+{
+	font-size: 62.5%;
+}
+
+*
+{
+	box-sizing: border-box;	
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+body 
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: rgb(116,148,236);
+}
+
+.wrapper{
+  width: 45rem;
+  background: #fff;
+  border-radius: 2rem;
+  padding: 3rem;
+  box-shadow: .7rem .7rem 1.2rem rgba(0,0,0,0.1);
+}
+.wrapper header{
+  color: #6990F2;
+  font-size: 2.7rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.wrapper__title
+{
+  color: #6990F2;
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.wrapper__form{
+  height: 16.5rem;
+  display: flex;
+  cursor: pointer;
+  margin: 3rem 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 0.2rem dashed #6990F2;
+}
+
+.wrapper__form i{
+  font-size: 50px;
+  color: #6990F2;
+}
+.wrapper__form p{
+  margin-top: 15px;
+  font-size: 16px;
+  color: #6990F2;
+}
+
+section .row{
+  margin-bottom: 10px;
+  background: #E9F0FF;
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+section .row i{
+  color: #6990F2;
+  font-size: 30px;
+}
+
+section .details span{
+  font-size: 14px;
+}
+
+.progress-area .row .content{
+  width: 100%;
+  margin-left: 1.5rem;
+}
+
+.progress-area .details{
+  display: flex;
+  align-items: center;
+  margin-bottom: .7rem;
+  justify-content: space-between;
+}
+
+.progress-area .content .progress-bar{
+  height: 6px;
+  width: 100%;
+  margin-bottom: 4px;
+  background: #fff;
+  border-radius: 30px;
+}
+
+.content .progress-bar .progress{
+  height: 100%;
+  width: 0%;
+  background: #6990F2;
+  border-radius: inherit;
+}
+
+.uploaded-area{
+  max-height: 15rem;
+  overflow-y: scroll;
+}
+
+.uploaded-area.onprogress{
+  max-height: 150px;
+}
+
+.uploaded-area::-webkit-scrollbar{
+  width: 0px;
+}
+
+.uploaded-area .row .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.uploaded-area .row .details{
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+
+.uploaded-area .row .details .size{
+  color: #404040;
+  font-size: 11px;
+}
+
+.uploaded-area i.fa-check{
+  font-size: 16px;
+  color: green;
+}
+
+.uploaded-area i.fa-times{
+  font-size: 16px;
+  color: black;
+}
+
+.wrapper__submit
+{
+	margin:2rem auto 0;
+	display: block;
+	padding:1rem 3rem;
+	outline: none;
+	border: none;
+	background-color: #6990F2;
+	color: white;
+	border-radius:1.5rem;
+	cursor: pointer;
+}
+
+.button_back
+{
+	margin:2rem auto 0;
+	display: block;
+	padding:1rem 3rem;
+	outline: none;
+	border: none;
+	background-color: #6990F2;
+	color: white;
+	border-radius:1.5rem;
+	cursor: pointer;
+}
+

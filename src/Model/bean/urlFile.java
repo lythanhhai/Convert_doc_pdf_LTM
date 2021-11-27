@@ -1,10 +1,10 @@
-package Model.bean;
+package model.Bean;
 
 public class urlFile {
-	private int id;
-	private String userName;
-	private String url;
-	private int status;
+	 int id;
+	 String userName;
+	 String url;
+	 int status;
 	
 	public void setId(int id)
 	{
@@ -13,7 +13,7 @@ public class urlFile {
 	
 	public int getId()
 	{
-		return this.id;
+		return id;
 	}
 	
 	public void setUserName(String userName)
@@ -23,7 +23,7 @@ public class urlFile {
 	
 	public String getUserName()
 	{
-		return this.userName;
+		return userName;
 	}
 	
 	public void setUrl(String url)
@@ -33,7 +33,7 @@ public class urlFile {
 	
 	public String getUrl()
 	{
-		return this.url;
+		return url;
 	}
 	
 	public void setStatus(int status)
@@ -43,6 +43,6 @@ public class urlFile {
 	
 	public int getStatus()
 	{
-		return this.status;
+		return status;
 	}
 }

@@ -1,0 +1,230 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+   
+}
+#head1
+{
+    /* lam toi anh */
+   background:  linear-gradient(
+    transparent, 
+     transparent
+   
+  ), url('https://topthuthuat.com/wp/wp-content/uploads/2020/09/hinh-anh-thanh-pdf.jpg') top center / cover no-repeat;
+  
+   background-attachment:fixed;
+  
+   height: 800px;
+  
+}
+
+.header
+{
+    background: #fff; 
+    width: 100%;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ z-index: 1;
+ display: flex;
+ box-shadow:0 0 10px #ccc;
+ padding: 10px 0 20px 0;
+ justify-content: space-between;
+}
+.logochu
+{
+   
+    /* width: 20%; */
+    margin: 0 5% 0 70px;
+
+   text-align: center;
+}
+
+.logochu .p1{
+ 
+ font-size: 13px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 4px;
+margin-top: 5px;
+ 
+ 
+
+
+}
+.logochu .p2{
+   font-size: 30px;
+ 
+   font-style: italic;
+  margin-bottom: 0;
+  
+    }
+    .dangnhap button
+    {
+      
+   color: #549494;
+    border: 0px solid #ccc;
+   background:#fff;
+   margin-left: 40px;
+    font-size: 20px;
+  font-family:"Times New Roman",serif; 
+    }
+
+.dangnhap button:hover
+{
+    color:#a9c9c9;
+}
+.dangnhap .ul
+{ 
+    display: flex;
+   
+    
+}
+.dangnhap
+{
+ margin-right:30px;
+}
+
+ .welcome
+{ 
+   position:absolute;
+    margin-top: 400px;
+  left: 7%;  
+ 
+ 
+}
+.welcome .w
+{
+	 
+font-size: 50px;
+color: black;
+
+}
+.welcome .w1
+{ 
+    margin: 5px 0 10px 0;
+
+    color: black;
+}
+.welcome .bttn
+{
+    background-color: transparent;
+    border: 1px solid #a9c9c9;
+height: 30px;
+width: 100px;
+color: black;
+margin-bottom: 179px;
+
+}
+
+.modal,.modal1
+{
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal.open 
+{
+    display: flex;
+}
+.modal1.open1
+{
+    display: flex;
+}
+.modal-container,.modal1-container
+{
+    background: #fff;
+    width: 500px;
+   min-height: 200px;
+position: relative;
+animation: modalFadeIn ease 0.7s;
+}
+.modal-header,.modal1-header
+{
+    background: #009688;
+   
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+.modal .ti-user,.modal1 .ti-user
+{
+    margin: 10px;
+}
+.modal-close:hover,.modal-close:hover1
+{
+    background:#ccc;
+    color:#000 ;
+}
+.modal-close,.modal1-close
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 12px;
+    cursor:pointer;
+   
+}
+.modal-body,.modal1-body
+{
+   padding: 20px;
+}
+.modal-label,.modal1-label
+{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+    
+}
+.modal-input,.modal1-input
+{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding:10px ;
+   margin-right: 20px;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+#pay:hover,#pay1:hover
+{
+    background:#ccc;
+    color:#000 ;
+}
+#pay,#pay1
+{
+    border: 1px solid #ccc;
+    width: 100%;
+  background: #009688;
+    padding: 15px;
+    color: #fff;
+  margin-bottom: 20px;
+}
+
+.up
+{
+	 display: flex;
+}
+@keyframes modalFadeIn
+{
+    from
+    {
+        opacity: 0;
+   transform: translateY(-140px);
+
+    }to
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

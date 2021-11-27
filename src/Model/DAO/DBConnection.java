@@ -1,4 +1,4 @@
-package Model.DAO;
+package model.DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,9 +12,8 @@ public class DBConnection {
 	public Connection Connection_DAO() throws ClassNotFoundException, SQLException
 	{
 		Class.forName("com.mysql.jdbc.Driver");
-		String url = "jdbc:mysql://localhost:3307/btl";
-		String user = "root";
-		Connection con = DriverManager.getConnection(url, user, "");
+		String url = "jdbc:mysql://127.0.0.1:3307/btl";
+		Connection con = (Connection)DriverManager.getConnection(url, "root", "");
 		return con;
 	}
 }
