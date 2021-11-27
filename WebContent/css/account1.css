@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+   
+}
+.logochu
+{
+   
+    /* width: 20%; */
+    margin: 50px 70px 5px 70px;
+
+    text-align: center;
+}
+
+.logochu .p1{
+ 
+ font-size: 13px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 4px;
+margin-top: 5px;
+ 
+ 
+
+
+}
+.logochu .p2{
+   font-size: 30px;
+ 
+   font-style: italic;
+  margin-bottom: 0;
+  
+    }
+    .hinh1
+    {
+      
+      display: flex;
+      
+      background: #fff;
+      box-shadow:0 0 10px #107070;
+     margin: 20px 25% 0 25%;
+    }
+.hinh1 .hinh
+{
+  width: 30%;
+  
+  margin: 5px 5px 5px 5px;
+  margin-right: 20px;
+
+  
+}
+.ten 
+{ margin-top: 15px;
+  
+  color:#107070;
+  font-size: 20px;
+ text-align: center;
+  font-style: italic;
+ font-family:cursive;
+ display: flex;
+ 
+}
+.ten .thongtin
+{
+  margin-right: 30px;
+}
+ .create
+{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color:black;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+ .dangxuat
+    {
+   
+   color: #549494;
+    border: 0px solid #107070;
+   background:#fff;
+   margin-left: 350px;
+  bottom:10px;
+    font-size: 20px;
+  font-family:"Times New Roman",serif; 
+    cursor:pointer;
+    }
+    .dangxuat:hover
+    {
+    color:#a9c9c9;
+    cursor:pointer;
+    }
+    
+    .logout
+    {
+    	
+    }
+
+.hinh1 .dangxuata
+{
+	color:#000;
+	border: 0px solid #107070;
+   background:#fff;
+    margin-top: 10px;
+    margin-bottom:15px;
+    font-size: 20px;
+  font-family:"Times New Roman",serif; 
+}
+.hinh1 .dangxuata:hover
+    {
+  cursor:pointer;
+    color:#a9c9c9;
+    }
+
+    

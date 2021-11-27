@@ -1,26 +1,21 @@
-package Model.bean;
+package model.Bean;
 
 public class Account {
-	private String userName;
-	private String passWord;
+	String id;
+	String pass;
 	
-	public void setUserName(String userName)
-	{
-		this.userName = userName;
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getPass() {
+		return pass;
+	}
+	public void setPass(String pass) {
+		this.pass = pass;
 	}
 	
-	public String getUserName()
-	{
-		return this.userName;
-	}
-	
-	public void setPassWord(String passWord)
-	{
-		this.passWord = passWord;
-	}
-	
-	public String getPassWord()
-	{
-		return this.passWord;
-	}
 }
